@@ -25,3 +25,6 @@ Veema can't make it to the optional coworking on Wednesday, but we will join on 
 ## Signatures
 Veema Jhagru _______________
 Date: 9/22/25
+
+Bianca Caprirolo—-—
+Date: 9/22/25
