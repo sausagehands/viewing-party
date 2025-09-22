@@ -34,7 +34,6 @@ def watch_movie(data_dict, movie_title):
         if movie_title in movie["title"]:
             data_dict["watched"].append(movie)
             data_dict["watchlist"].remove(movie)
-    print(data_dict)
     return data_dict
 
 # -----------------------------------------
