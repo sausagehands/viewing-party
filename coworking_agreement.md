@@ -3,23 +3,25 @@
 Talk through each section with your partner. Add notes on what you discussed and agreed upon in each section. At the bottom, type your names to sign off on your agreement.
 
 ## Accessibility Needs
-*What does each team member need access to in order to succeed and show up the best they can?*
+No accessibility needs
 
 ## Collaboration vs. Individual Work Expectations
-*Clarify your collaboration expectations - does your group want to write code together all of the time? Or divide work to do independently, then come together to share accomplishments? What tools and technologies can help your collaboration?*
+We will divide up the work and work independently with the intent of checking in after certain points in the code
 
 ## Learning Style
-*How does each team member learn best in project settings?*
+Veema -- Will look up articles on certain built-in functions or topics to refresh memory or gain deeper understanding before implementing
+Bianca -- Thinks about how to approach and will double check if it's a possibilty through a Google search  
 
 ## Preferred Feedback Style
-*How does each team member best receive feedback?*
+Veema -- Prefers to receive direct feedback 
+Bianca -- Prefers to receive written feedback 
 
 ## One Team Communication Skill to Improve
-*What is a teamwork-related skill you want to work on?*
+We're both used to working individually, so we'd like to improve our collaboration skills through this project.
 
 ## Optional: Other agreements
-*Other co-working agreements that were not captured in the above sections.*
+Veema can't make it to the optional coworking on Wednesday, but we will join on Thursday if project still needs work.
 
 ## Signatures
-______________ _______________
-Date: _________
+Veema Jhagru _______________
+Date: 9/22/25
