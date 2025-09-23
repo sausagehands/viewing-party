@@ -39,17 +39,6 @@ def watch_movie(data_dict, movie_title):
 # -----------------------------------------
 # ------------- WAVE 2 --------------------
 # -----------------------------------------
-    # watched = [
-    #     {
-    #         "title": "title", 
-    #         "rating": 0,
-    #         "genre": "horror"
-    #         }
-    #     ]
-    # user_data = {
-    #     "watched": [{dict1...key1:v1, k2:v2}] 
-    # }
-
 
 def get_watched_avg_rating(user_data):
     watched = user_data["watched"]
