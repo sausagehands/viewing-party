@@ -115,3 +115,25 @@ def get_friends_unique_watched(user_data):
 # -----------------------------------------
 # ------------- WAVE 5 --------------------
 # -----------------------------------------
+def get_new_rec_by_genre(user_data):
+    most_watched_genre = get_most_watched_genre(user_data)
+    friends_movies = get_friends_unique_watched(user_data)
+    
+    movie_recs = [movie for movie in friends_movies if movie['genre'] == most_watched_genre ]
+
+    return movie_recs
+    
+
+def get_rec_from_favorites(user_data):
+    favorite_movies = user_data.get("favorites")
+    friends = user_data.get("friends")
+    
+    friends_watched = {movie['title'] for friend in friends for movie in friend.get("watched")}
+    movie_recs = [movie for movie in favorite_movies if movie['title'] not in friends_watched]
+    
+    return movie_recs
+
+
+    
+    
+    
