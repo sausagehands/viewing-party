@@ -78,18 +78,25 @@ def get_most_watched_genre(user_data):
 # -----------------------------------------
 # ------------- WAVE 3 --------------------
 # -----------------------------------------
-#Determine which movies the user has watched, but none of their friends have watched.
-#Determine which movies at least one of the user's friends have watched, but the user has not watched.
 
 def get_unique_watched(user_data):
-    #user_data = {'watched': [{}], 'friends':[{watched:[{'title':}, {'title':}]}]}
+    
     user_watched = user_data.get("watched")
     friends = user_data.get("friends")
     
     #set comprehension to avoid duplicates-- if not it kept failing the test
-    friends_watched = {movie["title"] for friend in friends for movie in friend.get("watched")}
+    friends_watched = {
+        movie["title"] 
+        for friend in friends 
+        for movie in friend.get("watched")
+        }
     
-    unique_movies = [movie for movie in user_watched if movie["title"] not in friends_watched]
+    unique_movies = [
+        movie
+        for movie in user_watched 
+        if movie["title"] not in friends_watched
+        ]
+    
     return unique_movies
 
 
@@ -101,7 +108,11 @@ def get_friends_unique_watched(user_data):
     friends_watched = []
     for friend in friends:
         for movie in friend.get("watched"):
-            if movie["title"] not in user_watched and movie not in friends_watched:
+            if (
+                movie["title"] not in user_watched 
+                and movie not in friends_watched
+                ):
+                
                 friends_watched.append(movie)
 
     return friends_watched
@@ -130,7 +141,11 @@ def get_new_rec_by_genre(user_data):
     most_watched_genre = get_most_watched_genre(user_data)
     friends_movies = get_friends_unique_watched(user_data)
     
-    movie_recs = [movie for movie in friends_movies if movie['genre'] == most_watched_genre ]
+    movie_recs = [
+        movie 
+        for movie in friends_movies 
+        if movie['genre'] == most_watched_genre 
+        ]
 
     return movie_recs
     
@@ -139,8 +154,17 @@ def get_rec_from_favorites(user_data):
     favorite_movies = user_data.get("favorites")
     friends = user_data.get("friends")
     
-    friends_watched = {movie['title'] for friend in friends for movie in friend.get("watched")}
-    movie_recs = [movie for movie in favorite_movies if movie['title'] not in friends_watched]
+    friends_watched = {
+        movie['title']
+        for friend in friends 
+        for movie in friend.get("watched")
+        }
+    
+    movie_recs = [
+        movie 
+        for movie in favorite_movies 
+        if movie['title'] not in friends_watched
+        ]
     
     return movie_recs
 
